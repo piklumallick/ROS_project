@@ -1,0 +1,13 @@
+ssh pcname@ip or ssh -X pcname@ip  (find ip from other pc with ifconfig comand in terminal)
+put the password
+cd catkin_ws/
+cd src/
+cd ros0xrobot/
+cd launch/
+roslaunch ros0xrobot ros0xrobot_minimal.launch (this will connect the ros with robot)
+open new terminal
+go the same directory
+roslaunch ros0xrobot_teleop.launch
+Now we can control the robot from using keyboard
+cutecom (use to check the connection is established between ros and robot)--> click on open device-->give input 4E 45 58 05 01 0F-->output will be 53 05 03 1b 3c 2f 18 3b 71 13 48
+ls /dev/ttyU* (to check if the UBS is connected or not)
