@@ -20,5 +20,23 @@ roslaunch turtlebot_ (double tap "tab")
 roslaunch turtlebot_gazebo (double tap "tab")
 roslaunch turtlebot_gazebo turtlebot_world.launch
 
-New tab (ctrl+shft+t)
+
 roslaunch turtlebot_teleop keyboard_teleop.launch
+
+%%%%%%TURTLEBOT3%%%%%%%%%%%%%%%
+
+$ cd ~/catkin_ws/src/
+$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+$ cd ~/catkin_ws && catkin_make
+
+
+$ export TURTLEBOT3_MODEL=burger
+$ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+        OR
+$ export TURTLEBOT3_MODEL=waffle
+$ roslaunch turtlebot3_gazebo turtlebot3_world.launch
+        OR
+$ export TURTLEBOT3_MODEL=waffle_pi
+$ roslaunch turtlebot3_gazebo turtlebot3_house.launch
+
+$ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
