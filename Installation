@@ -29,6 +29,9 @@ $ cd ~/catkin_ws/src/
 $ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 $ cd ~/catkin_ws && catkin_make
 
+%%If catkin_make fails (Invoking "make cmake_check_build_system" failed)%%%%
+rosdep install --from-paths ~/catkin_ws/src --ignore-src
+
 
 $ export TURTLEBOT3_MODEL=burger
 $ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
