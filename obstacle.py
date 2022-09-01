@@ -38,7 +38,16 @@ class Circling(): #main class
         self.pub.publish(circle) # publish the move object
 
     def odometry(self, msg): #function for odometry
-        print (msg.pose.pose) #print position and orientation of turtlebot
+        print (msg.pose.pose) #print position and orientation of turtlebot a quaternion is a complex number with w as the real part and x, y, z as imaginary parts.
+
+   #############################################Regarding W in orientation######################
+#If a quaternion represents a rotation then w = cos(theta / 2), where theta is the rotation angle around the axis of the quaternion.
+#The axis v(v1, v2, v3) of a rotation is encoded in a quaternion: **x = v1 sin (theta / 2), y = v2 sin (theta / 2), z = v3 sin (theta / 2)*.
+#If w is 1 then the quaternion defines 0 rotation angle around an undefined axis v = (0,0,0).
+#If w is 0 the quaternion defines a half circle rotation since theta then could be +/- pi.
+#If w is -1 the quaternion defines +/-2pi rotation angle around an undefined axis v = (0,0,0).
+#A quater circle rotation around a single axis causes w to be +/- 0.5 and x/y/z to be +/- 0.5.
+######################################################################################################
 
 if __name__ == '__main__':
     rospy.init_node('obstacle_avoidance_node') #initilize node
