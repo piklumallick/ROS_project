@@ -11,6 +11,9 @@ sudo apt install ros-noetic-desktop-full
 sudo rosdep init
 rosdep update
 source /opt/ros/indigo/setup.bash
+            or
+source catkin_ws/devel/setup.bash
+
 sudo apt-get install vim
 vim ~/.bashrc (then at insert paste source /opt/ros/indigo/setup.bash)
 sudo apt-get install python-rosinstall
