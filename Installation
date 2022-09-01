@@ -11,9 +11,6 @@ sudo apt install ros-noetic-desktop-full
 sudo rosdep init
 rosdep update
 source /opt/ros/indigo/setup.bash
-            or
-source catkin_ws/devel/setup.bash
-
 sudo apt-get install vim
 vim ~/.bashrc (then at insert paste source /opt/ros/indigo/setup.bash)
 sudo apt-get install python-rosinstall
@@ -34,11 +31,16 @@ $ cd ~/catkin_ws && catkin_make
 
 %%If catkin_make fails (Invoking "make cmake_check_build_system" failed)%%%%
 rosdep install --from-paths ~/catkin_ws/src --ignore-src
+$ cd ~/catkin_ws && catkin_make
 
 
 $ export TURTLEBOT3_MODEL=burger
 $ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
-        OR
+
+%if it doesn't work:
+source catkin_ws/devel/setup.bash
+
+           OR
 $ export TURTLEBOT3_MODEL=waffle
 $ roslaunch turtlebot3_gazebo turtlebot3_world.launch
         OR
